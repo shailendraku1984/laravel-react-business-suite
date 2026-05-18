@@ -285,3 +285,17 @@ This project significantly improved practical understanding of:
 # Author
 
 Developed as a self-initiated full-stack ecommerce architecture project using Laravel 12 and React.
+<img width="1349" height="1513" alt="home" src="https://github.com/user-attachments/assets/bf00b62b-e9dc-4ad6-965b-ef8a756ef936" />
+
+<img width="1349" height="1225" alt="Counter Sale" src="https://github.com/user-attachments/assets/30811017-f9b6-4e1f-9930-c169dea578e7" />
+<img width="1349" height="1593" alt="Checkout" src="https://github.com/user-attachments/assets/e2455770-cbe7-4725-a49a-8bf437a7ed58" />
+
+<img width="1349" height="2641" alt="Orders" src="https://github.com/user-attachments/assets/0f76c5c5-cb9f-4ed4-a27b-c2e54548b987" />
+
+<img width="1366" height="564" alt="Role" src="https://github.com/user-attachments/assets/04a54090-6852-48df-a20f-1b1fe3818b78" />
+
+<img width="1349" height="2811" alt="Create Role" src="https://github.com/user-attachments/assets/1d3ab1a7-4593-46f3-8c63-81c0c67517c0" />
+
+<img width="1366" height="643" alt="Create User" src="https://github.com/user-attachments/assets/15d6f9d5-ca4f-4b70-abc2-5b1b4393e704" />
+
+
