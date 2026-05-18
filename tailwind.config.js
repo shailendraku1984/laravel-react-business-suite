@@ -1,4 +1,8 @@
+import forms from '@tailwindcss/forms';
+import typography from '@tailwindcss/typography';
+
 export default {
+
     content: [
         "./resources/**/*.blade.php",
         "./resources/**/*.js",
@@ -10,6 +14,7 @@ export default {
     },
 
     plugins: [
-        require('@tailwindcss/forms'),
+        forms,
+        typography,
     ],
-}
+};

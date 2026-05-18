@@ -93,7 +93,7 @@ export default function Products() {
                     </h1>
 
                     <p className="text-xl text-indigo-100">
-                        Explore our latest ecommerce collection
+						Explore our Tested & Certified Hygiene Products
                     </p>
 
                 </div>

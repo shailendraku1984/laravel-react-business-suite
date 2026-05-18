@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
+import { Link  } from 'react-router-dom';
 import MainLayout from '../layouts/MainLayout';
 import ProductCard from '../components/ProductCard';
 
@@ -56,15 +56,16 @@ export default function Home() {
                 <div className="max-w-7xl mx-auto px-6 text-center">
 
                     <h1 className="text-5xl font-bold mb-6">
-                        Modern Ecommerce Store
+                        Family Health & Protection
                     </h1>
 
                     <p className="text-xl text-indigo-100 max-w-3xl mx-auto leading-8">
-                        Build powerful ecommerce experiences with Laravel and React.
+                        Focus on protection, cleanliness, or self-care.
                     </p>
 
                     <button className="mt-8 bg-white text-indigo-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition">
-                        Shop Now
+                        
+						<Link to="/products">Shop Now</Link>
                     </button>
 
                 </div>

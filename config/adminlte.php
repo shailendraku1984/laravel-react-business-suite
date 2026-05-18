@@ -316,87 +316,8 @@ return [
             'type' => 'sidebar-menu-search',
             'text' => 'search',
         ],
-         
-        [
-            'text' => 'pages',
-            'url' => 'admin/cms',
-            'icon' => 'far fa-fw fa-circle',
-            'label' => 4,
-            'label_color' => 'success',
-			'can'  => 'cms.view',
-        ],
-		[
-            'text' => 'Warehouse',
-            'url' => 'admin/warehouse',
-            'icon' => 'far fa-fw fa-circle',
-            'label_color' => 'success',
-			'can'  => 'warehouse.view',
-        ],
-		
-		[
-            'text' => 'Role',
-            'url' => 'admin/rbac/roles',
-            'icon' => 'far fa-fw fa-circle',
-            'label_color' => 'success',
-			'can'  => 'roles.manage',
-        ],
-		[
-            'text' => 'ACL',
-            'url' => 'admin/acl',
-            'icon' => 'far fa-fw fa-circle',
-            'label_color' => 'success',
-			'can'  => 'acl.view',
-        ],
-		[
-            'text' => 'User',
-            'url' => 'admin/users',
-            'icon' => 'far fa-fw fa-circle',
-            'label_color' => 'success',
-			'can'  => 'users.view',
-        ],
-		[
-            'text' => 'Category',
-            'url' => 'admin/category',
-            'icon' => 'far fa-fw fa-circle',
-            'label_color' => 'success',
-			'can'  => 'category.view',
-        ],
-        [
-            'text' => 'Branch',
-            'url' => 'admin/branch',
-            'icon' => 'far fa-fw fa-circle',
-            'label_color' => 'success',
-			'can'  => 'branch.view',
-        ],
-        [
-            'text' => 'Bank Cash',
-            'url' => 'admin/bank-cash',
-            'icon' => 'far fa-fw fa-circle',
-            'label_color' => 'success',
-			'can'  => 'bank-cash.view',
-        ],
-        [
-            'text' => 'Third Party',
-            'url' => 'admin/third-party',
-            'icon' => 'far fa-fw fa-circle',
-            'label_color' => 'success',
-			'can'  => 'third-party.view',
-        ],
-        [
-            'text' => 'Products',
-            'url' => 'admin/products',
-            'icon' => 'far fa-fw fa-circle',
-            'label_color' => 'success',
-			'can'  => 'products.view',
-        ],
-        [
-            'text' => 'Expenses',
-            'url' => 'admin/expenses',
-            'icon' => 'far fa-fw fa-circle',
-            'label_color' => 'success',
-			'can'  => 'expenses.view',
-        ],
-        ['header' => 'account_settings'],
+        
+		['header' => 'account_settings'],
         [
             'text' => 'profile',
             'url' => 'admin/profile',
@@ -407,17 +328,134 @@ return [
             'url' => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
         ],
+		
+        
+		
+		
+		[
+            'text' => 'RBAC & ACL Config',
+            'icon' => 'fas fa-fw fa-share',
+            'submenu' => [
+                [
+					'text' => 'Manage Role',
+					'url' => 'admin/rbac/roles',
+					'icon' => 'far fa-fw fa-circle',
+					'label_color' => 'success',
+					'can'  => 'roles.manage',
+				],
+				[
+					'text' => 'Manage ACL',
+					'url' => 'admin/acl',
+					'icon' => 'far fa-fw fa-circle',
+					'label_color' => 'success',
+					'can'  => 'acl.view',
+				],
+				[
+					'text' => 'Manage User',
+					'url' => 'admin/users',
+					'icon' => 'far fa-fw fa-circle',
+					'label_color' => 'success',
+					'can'  => 'users.view',
+				],
+			]	
+		],
+		 
+		
+        [
+            'text' => 'MASTER SETTING',
+            'icon' => 'fas fa-fw fa-share',
+            'submenu' => [
+        [
+            'text' => 'Manage Branch',
+            'url' => 'admin/branch',
+            'icon' => 'far fa-fw fa-circle',
+            'label_color' => 'success',
+			'can'  => 'branch.view',
+        ],
+		[
+            'text' => 'Manage Warehouse',
+            'url' => 'admin/warehouse',
+            'icon' => 'far fa-fw fa-circle',
+            'label_color' => 'success',
+			'can'  => 'warehouse.view',
+        ],
+		[
+            'text' => 'Manage Bank Cash',
+            'url' => 'admin/bank-cash',
+            'icon' => 'far fa-fw fa-circle',
+            'label_color' => 'success',
+			'can'  => 'bank-cash.view',
+        ],
+		[
+            'text' => 'Manage Third Party',
+            'url' => 'admin/third-party',
+            'icon' => 'far fa-fw fa-circle',
+            'label_color' => 'success',
+			'can'  => 'third-party.view',
+        ],
+	  ]	
+	],
+		
+		 
+		
+		[
+            'text' => 'ECOMMERCE',
+            'icon' => 'fas fa-fw fa-share',
+            'submenu' => [
+                [
+					'text' => 'Manage Category',
+					'url' => 'admin/category',
+					'icon' => 'far fa-fw fa-circle',
+					'label_color' => 'success',
+					'can'  => 'category.view',
+				],
+				[
+					'text' => 'Manage Products',
+					'url' => 'admin/products',
+					'icon' => 'far fa-fw fa-circle',
+					'label_color' => 'success',
+					'can'  => 'products.view',
+				],
+			]	
+		],
+		
+		[
+            'text' => 'OTHERS',
+            'icon' => 'fas fa-fw fa-share',
+            'submenu' => [
+                [
+					'text' => 'Manage Pages',
+					'url' => 'admin/cms',
+					'icon' => 'far fa-fw fa-circle',
+					'label' => 6,
+					'label_color' => 'success',
+					'can'  => 'cms.view',
+				],
+				 
+				[
+					'text' => 'Manage Expenses',
+					'url' => 'admin/expenses',
+					'icon' => 'far fa-fw fa-circle',
+					'label_color' => 'success',
+					'can'  => 'expenses.view',
+				],
+			]	
+		],
+		
+        
+        
+		
 		/*
         [
             'text' => 'multilevel',
             'icon' => 'fas fa-fw fa-share',
             'submenu' => [
                 [
-                    'text' => 'level_one',
+                    'text' => 'ABC',
                     'url' => '#',
                 ],
                 [
-                    'text' => 'level_one',
+                    'text' => 'ABCD',
                     'url' => '#',
                     'submenu' => [
                         [
@@ -463,6 +501,7 @@ return [
             'url' => '#',
         ],
 		*/
+		 
     ],
 
     /*
