@@ -323,11 +323,7 @@ return [
             'url' => 'admin/profile',
             'icon' => 'fas fa-fw fa-user',
         ],
-        [
-            'text' => 'change_password',
-            'url' => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
+         
 		
         
 		
@@ -415,6 +411,13 @@ return [
 					'icon' => 'far fa-fw fa-circle',
 					'label_color' => 'success',
 					'can'  => 'products.view',
+				],
+				[
+					'text' => 'Manage Orders',
+					'url' => 'admin/orders',
+					'icon' => 'far fa-fw fa-circle',
+					'label_color' => 'success',
+					'can'  => 'orders.view',
 				],
 			]	
 		],

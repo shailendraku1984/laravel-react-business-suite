@@ -19,6 +19,7 @@ use App\Http\Controllers\Admin\BankCashController;
 use App\Http\Controllers\Admin\ThirdPartyController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\ExpenseController;
+use App\Http\Controllers\Admin\OrderController;
 /*
 |--------------------------------------------------------------------------
 | Admin Routes
@@ -57,13 +58,13 @@ Route::prefix('admin')
         | Profile
         |--------------------------------------------------------------------------
         */
-		 
-		Route::get('/profile',[ProfileController::class, 'edit'])
-			->name('admin.profile.edit');
+		
+        Route::get('/profile', [ProfileController::class,'edit'])->name('admin.profile.edit');
 
-		Route::patch('/profile',[ProfileController::class, 'update']
-		)->name('admin.profile.update');
-         
+        Route::patch('/profile', [ProfileController::class,'update'])->name('admin.profile.update');
+
+        Route::put('/profile/password', [ProfileController::class,'updatePassword'])->name('admin.password.update');
+
 		
         /*
         |--------------------------------------------------------------------------
@@ -585,6 +586,29 @@ Route::prefix('admin')
 		Route::delete('/{product}',[ProductController::class, 'destroy'])
 		->middleware('can:products.delete')
 		->name('destroy');
+	});
+
+	/*
+	|--------------------------------------------------------------------------
+	| orders
+	|--------------------------------------------------------------------------
+	*/
+
+	Route::prefix('orders')
+	->name('admin.orders.')
+	->group(function () {
+
+		Route::get('/',[OrderController::class, 'index'])
+		->middleware('can:orders.view')
+		->name('index');
+
+		Route::get('/{order}',[OrderController::class, 'show'])
+		->middleware('can:orders.view')
+		->name('show');
+
+		Route::patch('/{order}/status',[OrderController::class, 'updateStatus'])
+		->middleware('can:orders.update-status')
+		->name('update-status');
 	});
 
 	/*
