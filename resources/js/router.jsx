@@ -17,6 +17,8 @@ import Register from './pages/Register';
 import Checkout from './pages/Checkout';
 import Orders from './pages/Orders';
 import OrderDetails from './pages/OrderDetails';
+import CmsPage from './pages/CmsPage';
+
 
 function PrivateRoute({ children }) {
 
@@ -44,6 +46,8 @@ export default function Router() {
                 <Route path="/products" element={<Products />}/>
                 
 				<Route path="/cart" element={<Cart />}/>
+				
+				<Route path="/:slug" element={<CmsPage />} />
 				
 				<Route
 					path="/checkout"
