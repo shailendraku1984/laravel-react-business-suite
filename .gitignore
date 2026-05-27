@@ -1,24 +1,131 @@
-*.log
-.DS_Store
+# =========================================================
+# Laravel 12 - Production Ready .gitignore
+# =========================================================
+
+# -----------------------------
+# Environment Files
+# -----------------------------
 .env
-.env.backup
-.env.production
-.phpactor.json
-.phpunit.result.cache
-/.fleet
-/.idea
-/.nova
-/.phpunit.cache
-/.vscode
-/.zed
-/auth.json
-/node_modules
+.env.*
+!.env.example
+
+# -----------------------------
+# Laravel Core
+# -----------------------------
+/vendor/
+/bootstrap/cache/*.php
+!/bootstrap/cache/.gitignore
+
+# -----------------------------
+# Node / Frontend
+# -----------------------------
+/node_modules/
+/npm-debug.log
+/yarn-error.log
+/pnpm-lock.yaml
+
+# -----------------------------
+# Vite / Build Files
+# -----------------------------
 /public/build
 /public/hot
-/public/storage
-/storage/*.key
-/storage/pail
-/vendor
-Homestead.json
-Homestead.yaml
+
+# -----------------------------
+# Storage Runtime Files
+# -----------------------------
+/storage/logs/*
+!/storage/logs/.gitignore
+
+/storage/framework/cache/data/*
+!/storage/framework/cache/data/.gitignore
+
+/storage/framework/sessions/*
+!/storage/framework/sessions/.gitignore
+
+/storage/framework/testing/*
+!/storage/framework/testing/.gitignore
+
+/storage/framework/views/*
+!/storage/framework/views/.gitignore
+
+/storage/app/private/*
+!/storage/app/private/.gitignore
+
+# -----------------------------
+# Uploaded Files
+# Uncomment if uploads are local only
+# -----------------------------
+# /storage/app/public/
+
+# -----------------------------
+# Testing
+# -----------------------------
+/.phpunit.result.cache
+/phpunit.xml
+
+# -----------------------------
+# IDE / Editors
+# -----------------------------
+/.vscode/
+/.idea/
+/*.sublime-project
+/*.sublime-workspace
+
+# -----------------------------
+# OS Files
+# -----------------------------
+.DS_Store
 Thumbs.db
+
+# -----------------------------
+# Logs
+# -----------------------------
+*.log
+
+# -----------------------------
+# Cache Files
+# -----------------------------
+*.cache
+
+# -----------------------------
+# Temporary Files
+# -----------------------------
+*.tmp
+*.temp
+
+# -----------------------------
+# Backup / Database Files
+# -----------------------------
+*.bak
+*.sql
+*.sqlite
+*.sqlite3
+
+# -----------------------------
+# Coverage Reports
+# -----------------------------
+/coverage/
+/build/
+
+# -----------------------------
+# Pint / CS Fixer
+# -----------------------------
+.php-cs-fixer.cache
+.pint.cache
+
+# -----------------------------
+# Docker
+# -----------------------------
+docker-compose.override.yml
+
+# -----------------------------
+# Sensitive Files
+# -----------------------------
+*.pem
+*.key
+*.crt
+
+# -----------------------------
+# Laravel Sail
+# -----------------------------
+/.docker
